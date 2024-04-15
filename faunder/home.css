@@ -1,0 +1,167 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Fundo escuro */
+    color: #ccc; /* Cor do texto */
+}
+
+/* Estilos para a barra de navegação */
+.navbarra {
+    background-color: #0e5603; /* Cinza escuro */
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adicionando sombreamento */
+    text-align: center; /* Centralizar os botões */
+}
+
+/* Estilos para os botões na barra de navegação */
+.navbarra a {
+    transition: 0.7s;
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Gradiente de cores */
+    background-size: 200% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-decoration: none; /* Remove sublinhado do texto */
+    margin: 0 10px; /* Espaçamento entre os botões */
+    display: inline-block; /* Para aplicar margens e espaçamentos */
+}
+
+/* Estilos para os botões na barra de navegação ao passar o mouse */
+.navbarra a:hover {
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+
+/* Estilizando o logotipo */
+#lhlogo {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilos para os botões na barra de navegação */
+#botao2 {
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+/* Estilos para a seção "EM ALTA" */
+.main {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #444; /* Verde escuro */
+    border-radius: 8px;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #fff; /* Cor do título */
+}
+
+/* Estilos para os vídeos */
+#video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#video {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    display: block;
+    position: relative;
+}
+
+#thumbnail {
+    width: 280px;
+    height: 190px;
+    border-radius: 8px;
+    
+}
+
+#thumbnail:hover {
+    filter: blur(2px);
+    transition: 5ms;
+    height: 200px;
+    width: 290px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#video:hover #overlay {
+    opacity: 1;
+}
+
+/* Estilos para a seção de propaganda */
+.container {
+    background-color: #666; /* Cinza escuro */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#gif {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#overlay2 {
+    margin-top: 10px;
+}
+
+/* Estilos para a imagem de Dwayne "The Rock" Johnson */
+#dwaynej {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.therock {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o texto de descrição */
+.therock span {
+    font-weight: bold;
+}
+
+/* Estilizando o texto do rodapé */
+footer {
+    text-align: center;
+    background-color: #333; /* Cinza escuro */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: auto;
+}

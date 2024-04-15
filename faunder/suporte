@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Área de suporte</title>
+</head>
+<body id="bodySuporte">
+    <div id="titleSuporte">
+        <h1 id="titleSuporte">Área de Suporte</h1>
+        <div id="subtitulo">
+            <h2>Qual o problema encontrado ?</h2>
+        </div>
+    </div>
+    <div id="escolherProblem" >
+        <label for="problem1">
+            <input type="checkbox" id="problem1" name="problems">
+            <p>Problemas para cadastrar espécie</p>
+        </label> 
+        <label for="problem2">
+            <input type="checkbox" id="problem2" name="problems">
+            <p>Insira um problema aqui</p>
+        </label>
+        <label for="problem3">
+            <input type="checkbox" id="problem3" name="problems">
+            <p>Insira um problema aqui</p>
+        </label>
+        <label for="problem4">
+            <input type="checkbox" id="problem4" name="problems">
+            <p>Insira um problema aqui</p>
+        </label>
+        <label for="problem5">
+            <input type="checkbox" id="problem5" name="problems">
+            <p>Insira um problema aqui</p>
+        </label>   
+    </div>
+
+    <div id="especificacaoProblema">
+        <label for="Digite"></label>
+        <input type="text" name="txt" id="txtSuporte" /> 
+        <br><br>
+    </div>
+    <input type="button" value="Enviar" name="submit" id="submitProblem">
+</body>
+</html>
