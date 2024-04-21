@@ -1,0 +1,164 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Fundo escuro */
+    color: #ccc; /* Cor do texto */
+}
+
+
+/* Estilos para a barra de navegação */
+.navbarra {
+    background-color: #0e5603; /* Cinza escuro */
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adicionando sombreamento */
+    text-align: center; /* Centralizar os botões */
+}
+
+/* Estilos para os botões na barra de navegação */
+.navbarra a {
+    transition: 0.7s;
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Gradiente de cores */
+    background-size: 200% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-decoration: none; /* Remove sublinhado do texto */
+    margin: 0 10px; /* Espaçamento entre os botões */
+    display: inline-block; /* Para aplicar margens e espaçamentos */
+}
+
+/* Estilos para os botões na barra de navegação ao passar o mouse */
+.navbarra a:hover {
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+
+/* Estilizando o logotipo */
+#lhlogo {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilos para os botões na barra de navegação */
+#botao2 {
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+
+
+/* Estilos para a seção "EM ALTA" */
+.main {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #444; /* Verde escuro */
+    border-radius: 8px;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #fff; /* Cor do título */
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+  /* Alterando o fundo para preto */
+    padding: 20px; /* Adicionando um espaçamento interno */
+    margin: 0 auto; /* Centralizando na tela */
+    max-width: 1200px; /* Definindo uma largura máxima para evitar que o conteúdo se estenda muito */
+}
+.box {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    margin: 20px auto;
+    width: 800px;
+    padding: 20px;
+    background-color: #444; /* Verde escuro */
+    border-radius: 8px;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.3);
+    padding: 10px; /* Adiciona espaçamento interno */
+    margin-bottom: 20px; /* Adiciona espaço entre os posts */
+}
+
+.box .img {
+    flex: 0 0 auto; /* Define o tamanho do contêiner de imagem como automático */
+    margin-right: 15px; /* Adiciona espaço entre a imagem e os detalhes */
+}
+
+.box .img img {
+    max-width: 150px; /* Define a largura máxima da imagem */
+    max-height: 150px; /* Define a altura máxima da imagem */
+    border-radius: 10px;
+}
+
+.details {
+    flex: 1; /* Ocupa todo o espaço restante */
+}
+.details p {
+    color: #4CAF50;
+    margin-bottom: 5px;
+    cursor: pointer; /* Altera o cursor para uma mãozinha */
+    text-decoration: underline; /* Adiciona uma linha sublinhada ao texto */
+}
+
+.details p:hover {
+    color: #45a049; /* Altera a cor do texto ao passar o mouse */
+}
+
+.details h3 {
+    color: #ffffff;
+    margin: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.details h3:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.sub-details {
+    display:flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.comment {
+    display:flex;
+    align-items: center;
+}
+
+.comment i {
+    margin-right: 5px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color:white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: auto;
+
+}
+

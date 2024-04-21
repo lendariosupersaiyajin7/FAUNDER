@@ -11,7 +11,7 @@
     $result = $conn->query($sql);
 
     if ($result === TRUE) {
-        header("Location: entusiasta_lst.php");
+        header("Location: loginentusiasta.php");
     }
     else {
         echo "não foi";

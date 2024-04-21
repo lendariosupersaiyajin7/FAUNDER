@@ -170,3 +170,7 @@ input[type="submit"] {
     border-radius: 5px; /* Cantos arredondados */
     box-sizing: border-box; /* Considerar padding e borda na largura total */
 }
+#bodylogin {
+  background-image: url("https://i.gifer.com/embedded/download/D00b.gif");
+  background-color: purple;
+}

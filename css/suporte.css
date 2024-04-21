@@ -1,0 +1,242 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Fundo escuro */
+    color: #ccc; /* Cor do texto */
+}
+
+/* Estilos para a barra de navegação */
+.navbarra {
+    background-color: #0e5603; /* Cinza escuro */
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Adicionando sombreamento */
+    text-align: center; /* Centralizar os botões */
+}
+
+/* Estilos para os botões na barra de navegação */
+.navbarra a {
+    transition: 0.7s;
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Gradiente de cores */
+    background-size: 200% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-decoration: none; /* Remove sublinhado do texto */
+    margin: 0 10px; /* Espaçamento entre os botões */
+    display: inline-block; /* Para aplicar margens e espaçamentos */
+}
+
+/* Estilos para os botões na barra de navegação ao passar o mouse */
+.navbarra a:hover {
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+
+/* Estilizando o logotipo */
+#lhlogo {
+    height: 50px;
+    width: auto;
+}
+/* Estilos para os botões na barra de navegação */
+#botao2 {
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+.main {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #444; /* Verde escuro */
+    border-radius: 8px;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #fff; /* Cor do título */
+}
+
+
+#problems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10p;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+#problem {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    display: block;
+    position: relative;
+    
+}
+
+
+.main {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.checkboxes {
+    display:block;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.problem {
+    display: flex; /* Adiciona flexbox para alinhar itens lado a lado */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin: 10px;
+    text-align: justify;
+}
+
+#problems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#problems label {
+    margin-bottom: 10px;
+}
+
+#problems input[type="text"] {
+    margin-bottom: 10px;
+}
+
+
+.problem input[type="checkbox"] {
+    margin-right: 10px; /* Adiciona um espaçamento entre a checkbox e o texto */
+}
+
+.problem p {
+    margin: 0;
+    margin-left: 30px;
+    color: white;
+    background-color: #45a049;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Estilizando a checkbox */
+.problem input[type="checkbox"] {
+    /* Oculta a checkbox padrão */
+    display: none;
+}
+
+/* Estilizando o rótulo da checkbox */
+.problem label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+/* Estilizando a aparência da checkbox */
+.problem label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc; /* Cor da borda */
+    background-color: #fff; /* Cor de fundo */
+}
+
+/* Estilizando a aparência da marca de seleção */
+.problem input[type="checkbox"]:checked + label:before {
+    background-color: #1d7538; /* Cor de fundo quando selecionado */
+}
+
+/* Estilizando o texto do rótulo */
+.problem p {
+    margin: 0;
+    color:white;
+    background-color: #45a049;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor:pointer;
+     /* Espaço entre a checkbox e o texto */
+}
+
+
+.problem p:hover {
+    background-color: #146d19;
+}
+
+.problem input[type="checkbox"]:checked + p {
+    background-color: #146d19;
+}
+
+#txtSuporte {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Largura personalizada */
+    height: 100px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+
+#submitProblem {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Alteração para ocupar toda a largura */
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px auto; /* Alteração para alinhar ao centro */
+}
+
+
+#submitProblem:hover {
+    background-color: #146d19;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color:white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: auto;
+
+}
+

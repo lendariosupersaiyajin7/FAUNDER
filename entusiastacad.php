@@ -24,3 +24,27 @@
     
 </body>
 </html>
+
+<script>
+        document.getElementById('caixa_formulario').addEventListener('submit', function(event) {
+            var dataNascimento = document.getElementById('dataNasciEntusiasta').value;
+            var senha = document.getElementById('senhaEntusiasta').value;
+
+            var dataRegex = /^(19\d\d|200[0-6])-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
+            var senhaRegex = /^.{8,}$/;
+
+            var hoje = new Date();
+            var dataMinima = new Date(hoje.getFullYear() - 18, hoje.getMonth(), hoje.getDate());
+
+            var nascimento = new Date(dataNascimento);
+            if (!dataRegex.test(dataNascimento) || nascimento > dataMinima) {
+                alert("Você deve ter pelo menos 18 anos para se cadastrar.");
+                event.preventDefault(); 
+            }
+
+            if (!senhaRegex.test(senha)) {
+                alert("A senha deve ter pelo menos 8 caracteres.");
+                event.preventDefault();
+            }
+        });
+    </script>
