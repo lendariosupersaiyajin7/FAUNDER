@@ -1,4 +1,5 @@
 <?php
+// LISTA DE ADM
     include("conn.php");
 
     $sql = "SELECT ID_ADM, Nome_ADM, Apelido_ADM, Email_ADM, Senha_ADM, SenhaEpicaSecreta_ADM, DataNasci_ADM FROM ADM";

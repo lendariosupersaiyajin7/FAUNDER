@@ -19,7 +19,7 @@
             $_SESSION['emailADM'] = $emailADM;
             $_SESSION['nomeADM'] = $user['Nome_ADM'];
             $_SESSION['idADM'] = $user['ID_ADM']; 
-            header("Location: indexcomp3.html"); 
+            header("Location: perfiladm.php"); 
             exit;
         } else {
             $error = "O Email ou a Senha estão incorretos.";
@@ -31,16 +31,15 @@
 <html>
 <head>
     <title>Login de ADM</title>
-    <link rel="stylesheet" href="login.css">
 </head>
 <body id="bodylogin">
     <h2>Login de ADM</h2>
-    <form method="POST" action="loginadm.php" id='caixa_formulario'>
+    <form method="POST" action="loginADM.php" id='caixa_formulario'>
         <label for="emailADM">Email:</label>
         <input type="text" name="emailADM" required><br>
         <label for="senhaADM">Senha:</label>
         <input type="password" name="senhaADM" required><br>
-        <button type="submit" id="botao3">Entrar</button>
+        <button type="submit">Entrar</button>
     </form>
     <?php if (isset($error)): ?>
         <p><?php echo $error; ?></p>

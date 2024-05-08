@@ -1,4 +1,5 @@
 <?php
+// VALIDAÇÃO (INSERT) DE ESPECIALISTA
     include("conn.php");
 
     $nomeEspecialista = $_POST["nomeEspecialista"];
@@ -12,7 +13,7 @@
     $result = $conn->query($sql);
 
     if ($result === TRUE) {
-        header("Location: especialista_lst.php");
+        header("Location: loginespecialista.php");
     }
     else {
         echo "não foi";

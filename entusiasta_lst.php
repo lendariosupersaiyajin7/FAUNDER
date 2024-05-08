@@ -1,4 +1,5 @@
 <?php
+// LISTA DE ENTUSIASTAS
     include("conn.php");
 
     $sql = "SELECT ID_Entusiasta, Nome_Entusiasta, Apelido_Entusiasta, Email_Entusiasta, Senha_Entusiasta, DataNasci_Entusiasta FROM Entusiasta";
@@ -15,7 +16,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua Página</title>
-    <link rel="stylesheet" href="tabelas.css">
 </head>
 <body>
 

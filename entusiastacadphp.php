@@ -1,4 +1,5 @@
 <?php
+// VALIDAÇÃO (INSERT) DE ENTUSIASTA
     include("conn.php");
 
     $nomeEntusiasta = $_POST["nomeEntusiasta"];
