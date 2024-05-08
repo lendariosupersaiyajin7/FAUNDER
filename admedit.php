@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAUNDER - EDIÇÃO</title>
-    <link rel="stylesheet" href="tabelas.css">
 </head>
 <body>
 
@@ -25,14 +24,13 @@
         $Apelido_ADM = $row['Apelido_ADM'];
         $Email_ADM = $row['Email_ADM'];
         $Senha_ADM = "";
-        $SenhaEpicaSecreta_ADM = $row['SenhaEpicaSecreta_ADM'];
         $DataNasci_ADM = $row['DataNasci_ADM'];
     } else {
-        echo "Entusiasta não encontrado.";
+        echo "ADM não encontrado.";
     }
 ?>
 
-<form id="caixa_formulario" action="admeditphp.php?id=<?php echo $ID_ADM; ?>" method="POST">
+<form id="caixa_formulario" action="ADMeditphp.php?id=<?php echo $ID_ADM; ?>" method="POST">
     
     <input type="hidden" name="ID_ADM" value="<?php echo $ID_ADM; ?>">
     <td>Nome:</td>
@@ -41,10 +39,8 @@
     <input type="text" name="Apelido_ADM" value="<?php echo $Apelido_ADM; ?>" placeholder="Apelido" required><br>
     <td>Email:</td>
     <input type="email" name="Email_ADM" value="<?php echo $Email_ADM; ?>" placeholder="Email" required><br>
-    <td>Senha:</td>
-    <input type="password" name="Senha_ADM" value="<?php echo $Senha_ADM; ?>" placeholder="Senha" required><br>
-    <td>Senha Épica Secreta:</td>
-    <input type="password" name="SenhaEpicaSecreta_ADM" value="<?php echo $SenhaEpicaSecreta_ADM;?>" placeholder="Senha Épica Secreta"><br>
+    <td>Nova Senha:</td>
+    <input type="password" name="Senha_ADM" value="<?php echo $Senha_ADM; ?>" placeholder="Nova Senha"><br>
     <td>Data de nascimento:</td>
     <input type="date" name="DataNasci_ADM" value="<?php echo $DataNasci_ADM; ?>" placeholder="Data de Nascimento" required><br>
     <input type="submit" value="Salvar">

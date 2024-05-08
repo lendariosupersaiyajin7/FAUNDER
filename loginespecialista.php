@@ -18,8 +18,9 @@
             $user = $result->fetch_assoc(); 
             $_SESSION['emailEspecialista'] = $emailEspecialista;
             $_SESSION['nomeEspecialista'] = $user['Nome_Especialista'];
+            $_SESSION['apelidoEspecialista'] = $user['Apelido_Especialista'];
             $_SESSION['idEspecialista'] = $user['ID_Especialista']; 
-            header("Location: indexcomp2.html"); 
+            header("Location: perfilespecialista.php"); 
             exit;
         } else {
             $error = "O Email ou a Senha estão incorretos.";
@@ -31,7 +32,6 @@
 <html>
 <head>
     <title>Login de Especialista</title>
-    <link rel="stylesheet" href="login.css">
 </head>
 <body id="bodylogin">
     <h2>Login de Especialista</h2>
@@ -40,7 +40,7 @@
         <input type="text" name="emailEspecialista" required><br>
         <label for="senhaEspecialista">Senha:</label>
         <input type="password" name="senhaEspecialista" required><br>
-        <button type="submit" id="botao3">Entrar</button>
+        <button type="submit">Entrar</button>
     </form>
     <?php if (isset($error)): ?>
         <p><?php echo $error; ?></p>

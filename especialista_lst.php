@@ -1,4 +1,5 @@
 <?php
+// LISTA DE ESPECIALISTAS
     include("conn.php");
 
     $sql = "SELECT ID_Especialista, Nome_Especialista, Apelido_Especialista, Email_Especialista, Senha_Especialista, DataNasci_Especialista, Comprovante_Especialista FROM Especialista";

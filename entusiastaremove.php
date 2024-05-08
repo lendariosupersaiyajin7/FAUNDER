@@ -1,5 +1,5 @@
 <?php
-
+// REMOÇÃO (DELETE) DE ENTUSIASTA
 include("conn.php");
 
 

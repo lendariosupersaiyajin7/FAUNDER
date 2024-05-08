@@ -1,4 +1,5 @@
 <?php
+// VALIDACAO DE FORMULARIO DE ADM
 include("conn.php");
 
 $nomeADM = $_POST["nomeADM"];
@@ -12,11 +13,11 @@ $sql = "INSERT INTO ADM (Nome_ADM, Apelido_ADM, Email_ADM, Senha_ADM, SenhaEpica
 $result = $conn->query($sql);
 
 if ($result === TRUE) {
-    header("Location: adm_lst.php"); // Redireciona para a página de lista de ADMs após o cadastro bem-sucedido
-    exit(); // Encerra o script após o redirecionamento
+    header("Location: loginadm.php"); 
+    exit(); 
 } else {
-    echo "Erro ao cadastrar ADM: " . $conn->error; // Em caso de erro na inserção
+    echo "Erro ao cadastrar ADM: " . $conn->error; 
 }
 
-$conn->close(); // Fecha a conexão com o banco de dados
+$conn->close(); 
 ?>
