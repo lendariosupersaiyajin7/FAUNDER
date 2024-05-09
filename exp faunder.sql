@@ -143,3 +143,7 @@ ALTER TABLE Registra ADD CONSTRAINT FK_Registra_2
     FOREIGN KEY (fk_Catalogo_ID_Catalogo)
     REFERENCES Catalogo (ID_Catalogo)
     ON DELETE SET NULL;
+    
+ALTER TABLE Mensagem
+ADD COLUMN fk_Especialista_ID_Especialista INT;
+

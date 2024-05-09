@@ -18,6 +18,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum</title>
+    <link rel="stylesheet" href="css/forum.css">
 </head>
 <body>
 
@@ -26,7 +27,7 @@ if (!$result) {
 <?php
 // Verificar se existem tópicos no fórum
 if ($result->num_rows > 0) {
-    // Loop através dos resultados e exibir cada tópico
+    // Loop através dos resultados e exibir cada tópico     
     while ($row = $result->fetch_assoc()) {
         echo "<div>";
         echo "<h2>" . $row["Titulo_Forum"] . "</h2>";
@@ -34,14 +35,13 @@ if ($result->num_rows > 0) {
         echo "<p>Data de Criação: " . $row["DataCriacao_Forum"] . "</p>";
         // Link para visualizar as mensagens do tópico
         echo "<a href='mensagens.php?id=" . $row["ID_Forum"] . "'>Ver Mensagens</a>";
+        echo "<a href='editar_forum.php?id=" . $row["ID_Forum"] . "'><button>Editar Fórum</button></a>";
         echo "</div>";
         echo "<hr>";
     }
 } else {
     echo "<p>Não há tópicos no fórum.</p>";
 }
-
-
 // Fechar a conexão com o banco de dados
 $conn->close();
 ?>
