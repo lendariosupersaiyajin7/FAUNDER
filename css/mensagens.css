@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: green; /* verde */
+}
+
+.message {
+    background-color: #111; /* preto mais escuro */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.message img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.message p {
+    margin: 0;
+    padding: 0;
+    color: #ccc; /* cinza claro */
+}
+
+.message .actions {
+    margin-top: 10px;
+}
+
+.message .actions a {
+    color: green; /* verde */
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.message .actions a:hover {
+    text-decoration: underline;
+}
+
+button{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button{
+    background-color: green; /* verde */
+    border: none;
+    color: #ffffff; /* preto */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(34, 204, 34); /* verde mais escuro */
+}
