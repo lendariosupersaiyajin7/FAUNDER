@@ -25,6 +25,7 @@ if (isset($_GET['id_mensagem'])) {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="css/editar_mensagem.css">
                 <title>Editar Mensagem</title>
             </head>
             <body>
@@ -35,10 +36,16 @@ if (isset($_GET['id_mensagem'])) {
                 <input type="hidden" name="id_mensagem" value="<?php echo $mensagem['ID_Mensagem']; ?>">
                 <label for="conteudo">Conteúdo:</label><br>
                 <textarea id="conteudo" name="conteudo" rows="4" cols="50"><?php echo $mensagem['Conteudo_Mensagem']; ?></textarea><br>
-                <label for="imagem">Imagem:</label><br>
-                <input type="file" id="imagem" name="imagem"><br>
+                <div class="file-upload">
+                    <label for="imagem">Anexar Imagem:</label><br>
+                    <input type="file" id="imagem" name="imagem" onchange="previewImage(event)"><br><br><br>
+                </div>
+                <img id="preview-image" src="#" alt="Imagem escolhida">
+                <button id="remove-image" type="button" onclick="removeImage()">Remover Imagem</button><br><br><br>
                 <input type="submit" value="Salvar Alterações">
             </form>
+
+            <script src="js/imagem.js"></script>
 
             </body>
             </html>

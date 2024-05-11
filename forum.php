@@ -22,7 +22,7 @@ if (!$result) {
 </head>
 <body>
 
-<h1>Tópicos do Fórum</h1>
+<h1>Fóruns</h1>
 
 <?php
 // Verificar se existem tópicos no fórum
@@ -40,13 +40,13 @@ if ($result->num_rows > 0) {
         echo "<hr>";
     }
 } else {
-    echo "<p>Não há tópicos no fórum.</p>";
+    echo "<p>Não há nenhum fórum criado.</p>";
 }
 // Fechar a conexão com o banco de dados
 $conn->close();
 ?>
 
 <!-- Botão para criar um novo tópico -->
-<a href="criar_topico.php"><button>Criar Tópico</button></a>
+<a href="criar_topico.php"><button>Criar Fórum</button></a>
 </body>
 </html>
