@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verificar se foi enviada uma nova imagem
         if ($_FILES['imagem']['error'] == UPLOAD_ERR_OK) {
             // Diretório onde as imagens serão armazenadas
-            $diretorio_destino = "caminho/para/o/diretorio/";
+            $diretorio_destino = "C:/xampp/htdocs/faunder/faunder-main/imagens/";
 
             // Obter o nome e o caminho do arquivo temporário
             $nome_arquivo_temporario = $_FILES['imagem']['tmp_name'];

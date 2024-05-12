@@ -17,7 +17,7 @@ if (isset($_GET['id_mensagem'])) {
         $mensagem = $result->fetch_assoc();
 
         // Verificar se o usuário logado é o autor da mensagem (você precisa implementar essa lógica)
-        if ($id_usuario_logado == $mensagem['fk_Entusiasta_ID_Entusiasta']) {
+        //if ($id_usuario_logado == $mensagem['fk_Entusiasta_ID_Entusiasta']) {
             // Exibir o formulário de edição da mensagem
 ?>
             <!DOCTYPE html>
@@ -50,10 +50,10 @@ if (isset($_GET['id_mensagem'])) {
             </body>
             </html>
 <?php
-        } else {
+        //} else {
             // Se o usuário não for o autor da mensagem, exibir uma mensagem de erro
-            echo "<p>Você não tem permissão para editar esta mensagem.</p>";
-        }
+          //  echo "<p>Você não tem permissão para editar esta mensagem.</p>";
+        //}
     } else {
         // Se não houver mensagem com o ID fornecido, exibir uma mensagem de erro
         echo "<p>Mensagem não encontrada.</p>";

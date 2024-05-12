@@ -91,7 +91,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/edita_forum.css">
+    <link rel="stylesheet" href="css/editar_forum.css">
     <title>Editar Fórum</title>
 </head>
 <body>
@@ -103,14 +103,20 @@ $conn->close();
     <input type="text" id="titulo" name="titulo" value="<?php echo $titulo_forum; ?>"><br><br>
     <label for="descricao">Descrição do Fórum:</label><br>
     <textarea id="descricao" name="descricao"><?php echo $descricao_forum; ?></textarea><br><br>
-    <label for="imagem">Nova Imagem do Fórum:</label><br>
-    <input type="file" id="imagem" name="imagem" onchange="previewImage(event)"><br><br>
-    <img id="imagem-preview" src="#" alt="Preview da Imagem" style="display: none;"><br><br>
+    
+    <div class="file-upload">
+        <label for="imagem">Alterar imagem do fórum:</label><br>
+        <input type="file" id="imagem" name="imagem" onchange="previewImage(event)"><br><br><br>
+    </div>
+    <img id="preview-image" src="#" alt="Imagem escolhida">
+    <button id="remove-image" type="button" onclick="removeImage()">Remover Imagem</button><br><br><br>
+
+    <br><br>
     <button type="submit" name="submit">Salvar Alterações</button>
 </form>
 <br>
 
-<script src="imagem.js"></script>
+<script src="js/imagem.js"></script>
 
 <!-- Formulário para exclusão do fórum -->
 <form method="POST">

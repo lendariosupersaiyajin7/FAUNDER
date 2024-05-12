@@ -3,7 +3,7 @@
 include("conn.php");
 
 // Consulta SQL para selecionar todos os tópicos do fórum
-$sql = "SELECT ID_Forum, Titulo_Forum, Descricao_Forum, DataCriacao_Forum FROM Forum";
+$sql = "SELECT ID_Forum, Titulo_Forum, Descricao_Forum, DataCriacao_Forum, Imagem_Capa FROM Forum";
 $result = $conn->query($sql);
 
 // Verificar se a consulta retornou resultados
@@ -30,9 +30,14 @@ if ($result->num_rows > 0) {
     // Loop através dos resultados e exibir cada tópico     
     while ($row = $result->fetch_assoc()) {
         echo "<div>";
+        if (!empty($row["Imagem_Capa"])) {
+            echo "<img src='" . $row["Imagem_Capa"] . "' alt='Imagem de Capa' style='border-radius: 20px'>";
+        }
         echo "<h2>" . $row["Titulo_Forum"] . "</h2>";
         echo "<p>" . $row["Descricao_Forum"] . "</p>";
         echo "<p>Data de Criação: " . $row["DataCriacao_Forum"] . "</p>";
+        // Exibir a imagem de capa do grupo, se existir
+
         // Link para visualizar as mensagens do tópico
         echo "<a href='mensagens.php?id=" . $row["ID_Forum"] . "'>Ver Mensagens</a>";
         echo "<a href='editar_forum.php?id=" . $row["ID_Forum"] . "'><button>Editar Fórum</button></a>";
