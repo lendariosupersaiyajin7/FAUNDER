@@ -8,6 +8,7 @@ CREATE TABLE Entusiasta (
     Email_Entusiasta VARCHAR(255),
     Senha_Entusiasta VARCHAR(255),
     DataNasci_Entusiasta DATE,
+    Imagem_Entusiasta BLOB,
     fk_ADM_ID_ADM INT,
     UNIQUE (Email_Entusiasta)
 );
@@ -20,6 +21,7 @@ CREATE TABLE Especialista (
     Senha_Especialista VARCHAR(255),
     DataNasci_Especialista DATE,
     Comprovante_Especialista VARCHAR(255),
+     Imagem_Especialista BLOB,
     fk_ADM_ID_ADM INT,
     UNIQUE (Email_Especialista, Comprovante_Especialista)
 );
@@ -31,6 +33,7 @@ CREATE TABLE ADM (
     Email_ADM VARCHAR(255),
     Senha_ADM VARCHAR(255),
     DataNasci_ADM DATE,
+     Imagem_ADM BLOB,
     SenhaEpicaSecreta_ADM VARCHAR(255),
     UNIQUE (Email_ADM, SenhaEpicaSecreta_ADM)
 );
@@ -41,6 +44,7 @@ CREATE TABLE Especie (
     NomeComum_Especie VARCHAR(255),
     DataRegistro_Especie DATE,
     Descricao_Especie VARCHAR(255),
+	Imagem_Especie BLOB,
     UNIQUE (NomeCientifico_Especie, NomeComum_Especie)
 );
 
@@ -50,6 +54,7 @@ CREATE TABLE Post (
     Descricao_Post VARCHAR(255),
     Like_Post INT,
     Deslike_Post INT,
+     Imagem_Post BLOB,
     fk_Entusiasta_ID_Entusiasta INT
 );
 
