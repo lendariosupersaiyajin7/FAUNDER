@@ -16,9 +16,10 @@ include("conn.php");
 // Iniciar a sessão
 session_start();
 
+
 // Verificar se o ID do usuário está presente na sessão
-if (isset($_SESSION['id_usuario'])) {
-    $id_usuario_logado = $_SESSION['id_usuario'];
+if (isset($_SESSION['idEntusiasta'])) {
+    $id_usuario_logado = $_SESSION['idEntusiasta'];
 }
 
 // Consulta SQL para selecionar todas as mensagens do banco de dados
@@ -36,11 +37,11 @@ if ($result->num_rows > 0) {
             echo "<p><strong>Imagem:</strong> <img src='" . $row['Imagem_Mensagem'] . "' alt='Imagem da Mensagem'></p>";
         }
         // Verificar se o usuário logado é o autor da mensagem
-        //if ($id_usuario_logado == $row['fk_Entusiasta_ID_Entusiasta']) {
-            // Se sim, exibir links para editar e excluir a mensagem
-        echo "<p><a href='editar_mensagem.php?id_mensagem=" . $row['ID_Mensagem'] . "'>Editar</a> | <a href='excluir_mensagem.php?id_mensagem=" . $row['ID_Mensagem'] . "'>Excluir</a></p>";
-        //}
-        echo "</div>";
+        if ($id_usuario_logado == $row['fk_Entusiasta_ID_Entusiasta']) {
+        // Se sim, exibir links para editar e excluir a mensagem
+            echo "<p><a href='editar_mensagem.php?id_mensagem=" . $row['ID_Mensagem'] . "'>Editar</a> | <a href='excluir_mensagem.php?id_mensagem=" . $row['ID_Mensagem'] . "'>Excluir</a></p>";
+            }
+         echo "</div>";
     }
 } else {
     echo "<p>Não há mensagens para exibir.</p>";
