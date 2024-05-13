@@ -58,6 +58,16 @@ CREATE TABLE Post (
     fk_Entusiasta_ID_Entusiasta INT
 );
 
+CREATE TABLE Forum (
+    ID_Forum INT AUTO_INCREMENT PRIMARY KEY,
+    Titulo_Forum VARCHAR(255) NOT NULL,
+	Imagem_Capa VARCHAR(255),
+    Descricao_Forum TEXT,
+    Data_Criacao_Forum DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fk_Entusiasta_ID_Entusiasta INT,
+    FOREIGN KEY (fk_Entusiasta_ID_Entusiasta) REFERENCES Entusiasta (ID_Entusiasta) ON DELETE CASCADE
+);
+
 CREATE TABLE Catalogo (
     ID_Catalogo INT AUTO_INCREMENT PRIMARY KEY,
     DataCriacao_Catalogo DATE,
