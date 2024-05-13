@@ -6,7 +6,8 @@
     <title>FAUNDER</title>
 </head>
 <body>
-    <form name="cadastroEspecie" id="caixa_formulario" method="post" action="especiecadphp.php">
+    <form action="especiecadphp.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="acaoCriarEspecie" value="criarEspecie">
         Nome Científico: <br>
         <input type="text" name="nomeCientificoEspecie" id="nomeCientificoEspecie" placeholder="Nome Científico" required><br>
         Nome Comum: <br>
@@ -17,8 +18,8 @@
         <textarea name="descricaoEspecie" id="descricaoEspecie" placeholder="Descrição" required></textarea><br>
         
         Imagem: <br>
-        <input type="file" name="imagemEspecie" id="imagemEspecie" required accept="image/*"><br><br>
-        <input type="submit" value="Registrar Espécie">
+        <input type="file" name="imagem_Especie"><br><br>
+        <button type="submit">Registrar Espécie</button>
     </form>    
 </body>
 </html>

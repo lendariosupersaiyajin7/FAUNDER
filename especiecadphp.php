@@ -2,26 +2,33 @@
 // VALIDAÇÃO (INSERT) DE ESPECIE
 include("conn.php");
 
-$nomeCientificoEspecie = $_POST["nomeCientificoEspecie"];
-$nomeComumEspecie = $_POST["nomeComumEspecie"];
-$dataRegistroEspecie = $_POST["dataRegistroEspecie"];
-$descricaoEspecie = $_POST["descricaoEspecie"];
-$imagemEspecie = $_FILES["imagemEspecie"]["tmp_name"]; 
 
 
-if (isset($imagemEspecie) && !empty($imagemEspecie)) {
-    $imagemEspecie = addslashes(file_get_contents($imagemEspecie)); 
-} else {
-    $imagemEspecie = null;
-}
 
-$sql = "INSERT INTO Especie (NomeCientifico_Especie, NomeComum_Especie, DataRegistro_Especie, Descricao_Especie, Imagem_Especie) VALUES('$nomeCientificoEspecie', '$nomeComumEspecie', '$dataRegistroEspecie', '$descricaoEspecie', '$imagemEspecie')";
-$result = $conn->query($sql);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $acaoCriarEspecie = $_POST['acaoCriarEspecie'];
 
-if ($result === TRUE) {
-    header("Location: especie_lst.php");
-} else {
-    echo "Erro ao inserir dados na tabela Especie: " . $conn->error;
-}
+    if ($acaoCriarEspecie == "criarEspecie") {
+        $nomeCientificoEspecie = $_POST["nomeCientificoEspecie"];
+        $nomeComumEspecie = $_POST["nomeComumEspecie"];
+        $dataRegistroEspecie = $_POST["dataRegistroEspecie"];
+        $descricaoEspecie = $_POST["descricaoEspecie"];
+        $imagem_Especie = $_FILES["imagem_Especie"]["tmp_name"];
+        $nome_imagem_Especie = $_FILES['imagem_Especie']['name'];
+
+        // verifica se foi enviada uma imagem
+        if ($imagem_Especie) {
+            $conteudo_imagem_Especie = addslashes(file_get_contents($imagem_Especie));
+            $query = "INSERT INTO Especie (NomeCientifico_Especie, NomeComum_Especie, DataRegistro_Especie, Descricao_Especie, Imagem_Especie) VALUES('$nomeCientificoEspecie', '$nomeComumEspecie', '$dataRegistroEspecie', '$descricaoEspecie', '$conteudo_imagem_Especie')";
+        } else {
+            $query = $imagem_Especie = null;
+        }
+        if (mysqli_query($conn, $query)) {
+            header("especie_lst.php");
+        } else {
+            echo "Erro ao registrar especie: " . mysqli_error($conn);
+        }
+    }
+    }
 
 ?>
