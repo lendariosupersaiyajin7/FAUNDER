@@ -31,8 +31,7 @@ Número de Registros: <?php echo $result->num_rows; ?><br><br>
         <th>Nome Comum</th>
         <th>Data de Registro</th>
         <th>Descrição</th>
-        <th>Imagem</th>
-        <th colspan="2">Operações</th>
+        <th colspan="3">Operações</th>
     </tr>
 
 <?php
@@ -45,6 +44,7 @@ Número de Registros: <?php echo $result->num_rows; ?><br><br>
             <td><?php echo $row["NomeComum_Especie"]?></td>
             <td><?php echo $row["DataRegistro_Especie"]?></td>
             <td><?php echo $row["Descricao_Especie"]?></td>
+            <td><a id="botao3" href="perfilespecie.php?id=<?php echo $row['ID_Especie']; ?>">Exibir</a></td>
             <td><a id="botao3" href="especieedit.php?id=<?php echo $row['ID_Especie']; ?>">Editar</a></td>
             <td><a id="botao4" href="especieremove.php?id=<?php echo $row['ID_Especie']; ?>">Remover</a></td>
         </tr>
