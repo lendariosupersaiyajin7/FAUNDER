@@ -1,0 +1,111 @@
+body {
+    background-color: rgb(33, 33, 33);
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+}
+
+#titulo {
+    text-align: center;
+    color: #fff; /* Cor do texto do título */
+}
+
+#nome-label,
+#email-label {
+    color: #fff; /* Cor do texto dos rótulos */
+}
+
+
+#body {
+    width: 60%; /* Defina a largura desejada para o corpo */
+    margin: 20px auto; /* Centraliza o corpo na página */
+    border-radius: 10px; /* Arredondamento das bordas do corpo */
+    overflow: hidden; /* Para esconder as bordas arredondadas fora do corpo */
+    box-shadow: 0px 4px 8px rgba(54, 255, 57, 0.464); /* Sombra suave */
+}
+
+#titulo {
+    background: linear-gradient(to top, #137704, #469E3F); /* Gradiente de cores para o título */
+
+    font-weight: bold;
+    padding: 10px;
+}
+
+p {
+    padding: 10px;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+#nome-label,
+#email-label {
+    font-weight: bold;
+}
+
+#nome-label,
+#email-label {
+    color: white;
+}
+
+#body p:nth-child(even) {
+    background-color: #25e39d;
+}
+
+#body p:hover {
+    background-color: #3d9230;
+    color: black;
+    transition: 0.7s;
+}
+#botao3 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #e1ff00, #45a049); /* Gradiente de cores */
+    background-size: 150% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    text-decoration: none; /* Remove sublinhado do texto */
+    
+}
+
+#botao3:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}
+
+#botao4 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #ff0000, #fc8200); /* Gradiente de cores */
+    background-size: 150% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    text-decoration: none; /* Remove sublinhado do texto */
+}
+
+#botao4:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #ff008c, #740030); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}

@@ -1,0 +1,176 @@
+table {
+    width: 93%; /* Defina a largura desejada para a tabela */
+    margin: 20px auto; /* Centraliza a tabela na página */
+    border-collapse: collapse;
+    border-radius: 10px; /* Arredondamento das bordas da tabela */
+    overflow: hidden; /* Para esconder as bordas arredondadas fora da tabela */
+    box-shadow: 0px 4px 8px rgba(54, 255, 57, 0.464); /* Sombra suave */
+    background: linear-gradient(to top, #33b31f, #83dd7d);
+}
+  body {
+    background-color: rgb(33, 33, 33);
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+  }
+  
+  table {
+    width: 93%; /* Defina a largura desejada para a tabela */
+    margin: 20px auto; /* Centraliza a tabela na página */
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background: linear-gradient(to top, #137704, #469E3F); /* Gradiente de cores para o cabeçalho */
+
+    color: white;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background: linear-gradient(to right, #137704, #25e39d); /* Cor de fundo para linhas pares */
+  }
+
+  tr:hover {
+    background: linear-gradient(to right, #3d9230, #25e39d);
+    color: black;
+    transition: 0.7s;
+  }
+  
+  #acao {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  #acao:hover {
+    text-decoration: underline;
+    color: darkblue;
+  }
+
+  #botao:hover {
+    background-color: rgb(57, 237, 117);
+    display: flex;
+    border-radius:15;
+  }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="submit"] {
+    margin: 10px 0;
+    padding: 10px; 
+    width: 100%; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; 
+    color: white; 
+    cursor: pointer; 
+}
+
+/* Importar a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#botao2 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Gradiente de cores */
+    background-size: 200% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+   
+    text-decoration: none; /* Remove sublinhado do texto */
+    margin-left: 51px;
+    
+}
+
+#botao2:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}
+
+#botao3 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #e1ff00, #45a049); /* Gradiente de cores */
+    background-size: 150% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    text-decoration: none; /* Remove sublinhado do texto */
+    
+}
+
+#botao3:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}
+
+#botao4 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #ff0000, #fc8200); /* Gradiente de cores */
+    background-size: 150% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    text-decoration: none; /* Remove sublinhado do texto */
+}
+
+#botao4:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #ff008c, #740030); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}
+
+
+#caixa_formulario {
+    width: 400px; /* Largura da caixa */
+    margin: 20px auto; /* Centralizar a caixa na página */
+    padding: 20px; /* Espaçamento interno da caixa */
+    border: 1px solid #ccc; /* Borda com cor cinza */
+    border-radius: 5px; /* Cantos arredondados */
+    box-sizing: border-box; /* Considerar padding e borda na largura total */
+}
+#bodylogin {
+  background-image: url("https://i.gifer.com/embedded/download/D00b.gif");
+  background-color: purple;
+}

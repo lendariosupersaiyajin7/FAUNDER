@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/suporte.css">
+    <title>Suporte</title>
+</head>
+<body>
+        
+    <div class="navbarra" id="navbarra">
+        <ul>
+           <a href="home.html"><img src="FORUM-FAUNDER\TESTE-FORUM\FAUNDER forum\img\passaralhologo.png" id="lhlogo" alt="logolh"></a>
+            <a id="botao2" href="forum.html"> Fórum</a>
+            <a id="botao2" href="adm_lst.php"> CADASTROS-administrador</a>
+            <a id="botao2" href="entusiasta_lst.php"> CADASTROS-entuiasta</a>
+            <a id="botao2" href="especialista_lst.php"> CADASTROS-especialista</a>
+        </ul>
+    </div>
+
+    <div class="main"><h2>SUPORTE</h2></div>
+    <div class="main" id="problems">
+        <label for="problem1" class="problem">
+            <input type="checkbox" id="problem1" name="problems">
+            <p>Problemas para cadastrar espécies</p>
+        </label> 
+        <label for="problem2" class="problem">
+            <input type="checkbox" id="problem2" name="problems">
+            <p>Problemas para validar espécies</p>
+        </label>
+        <label for="problem3" class="problem">
+            <input type="checkbox" id="problem3" name="problems">
+            <p>Problemas para adicionar post</p>
+        </label>
+        <label for="problem4" class="problem">
+            <input type="checkbox" id="problem4" name="problems">
+            <p>Problemas ao cadastrar usuário</p>
+        </label>
+        <label for="problem5" class="problem">
+            <input type="checkbox" id="problem5" name="problems">
+            <p>Problemas ao logar na plataforma</p>
+        </label>
+        <textarea name="txt" id="txtSuporte" placeholder="Especifique o problema"></textarea>
+        <br><br>
+        <div>
+            <input type="button" value="Enviar" name="submit" id="submitProblem" onclick="enviarProblema()"> 
+        </div>
+    </div>
+    
+    <br><br>
+    <br><br>
+    <footer id="footercustom" style="margin-top: 20px; background-color: rgb(65, 64, 64); padding: 30px; position: relative; top: 100%; bottom: 0; ">
+        Andrey Ribeiro, Athon Bilbao, Claudio Colombo, Eduardo Henrique e Eric Simões. 
+    </footer>
+
+    <script>
+        function enviarProblema() {
+            var textoSuporte = document.getElementById("txtSuporte").value;
+            if (textoSuporte.trim() === "") {
+                alert("Por favor, especifique o problema antes de enviar.");
+            } else {
+                alert("Problema enviado com sucesso!");
+            }
+        }
+    </script>
+
+</body>
+</html>

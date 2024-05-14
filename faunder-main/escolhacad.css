@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/030/949/926/original/cici-li-95a15454-085d-11eb-9a96-0242c0a82002.gif?1602135287");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif; /* Fonte padrão */
+  color: aliceblue
+}
+
+.navbarra {
+  background-color: #333; /* Cor de fundo da barra de navegação */
+  padding: 10px 0; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.navbarra ul {
+  list-style-type: none; /* Remove marcadores de lista */
+  margin: 0;
+  padding: 0;
+}
+
+.navbarra ul li {
+  display: inline;
+}
+
+.navbarra ul li a {
+  display: inline-block;
+}
+
+#lhlogo {
+  height: 50px; /* Altura do logotipo */
+}
+
+.content {
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+#cadastroB {
+  width: 100%; /* Aumenta a largura do formulário */
+  max-width: 600px; /* Define uma largura máxima para o formulário */
+  margin: 100px auto; /* Centraliza verticalmente e horizontalmente */
+  padding: 40px; /* Aumenta o espaçamento interno */
+  border: 1px solid #0f0; /* Borda com cor verde */
+  border-radius: 10px; /* Cantos arredondados */
+  box-sizing: border-box; /* Considera padding e borda na largura total */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo preto transparente */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Adiciona uma luz verde nas bordas */
+}
+
+.button-container {
+  text-align: center; /* Centraliza os botões */
+}
+
+.btn {
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  background-color: #0e5603; /* Cor de fundo do botão */
+  color: aliceblue; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Cursor ao passar o mouse */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+.btn:hover {
+  transition: 2ms;  
+  background-color: #127303; /* Cor de fundo ao passar o mouse */
+}

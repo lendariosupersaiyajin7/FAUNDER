@@ -1,0 +1,24 @@
+import os
+import stat
+import datetime
+
+if os.path.isfile("permissao.txt"):
+    os.chmod("permissao.txt", stat.S_IRWXU)
+
+try:
+    with open("permissao.txt", "w", encoding="utf-8") as arquivo:
+        arquivo.write("ARQUIVADO!🤣")
+
+    os.chmod("permissao.txt", stat.S_IRUSR)
+
+    print("Arquivo criado e texto escrito com sucesso!")
+except Exception as e:
+    print("Ocorreu um erro ao escrever no arquivo:", e)
+
+hora = os.path.getmtime("permissao.txt")
+data = datetime.datetime.fromtimestamp(hora)
+
+print("Hora da modificação do arquivo -> permissao.txt 🤣🤣🤣🤣🤣")
+print("<---------🔥🔥🔥🔥🔥--------->")
+print(f"permissao.txt --> {data}")
+print("<---------🔥🔥🔥🔥🔥--------->")
