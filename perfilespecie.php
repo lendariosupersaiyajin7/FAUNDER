@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAUNDER - ESÉCIE</title>
+    <title>FAUNDER - ESPÉCIE</title>
 </head>
 <body>
 
@@ -17,13 +17,15 @@
     $sql = "SELECT * FROM Especie WHERE ID_Especie = '$ID_Especie'";
     $result = $conn->query($sql);
 
-
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $Nome_Cientifico = $row['NomeCientifico_Especie'];
         $Nome_Comum = $row['NomeComum_Especie'];
         $DescricaoEspecie = $row['Descricao_Especie'];
         $imagemEspecie = $row['Imagem_Especie'];
+
+        // Converter o conteúdo da imagem em um formato de URL
+        $imagemDataURL = 'data:image/jpeg;base64,' . base64_encode($imagemEspecie);
         $DataRegistro_Especie = $row['DataRegistro_Especie'];
 
     } else {
@@ -39,7 +41,8 @@
     <p>Descrição de Espécie</p>
     <?php echo $DescricaoEspecie;?>
     <p>Imagem de Espécie</p>
-    <img src="<?php echo $imagemEspecie;?>">
+    <!-- Exibir a imagem usando a tag <img> -->
+    <img src="<?php echo $imagemDataURL; ?>" alt="Imagem de Espécie">
 
     <p>Data de Registro</p>
     <?php echo $DataRegistro_Especie;?>
