@@ -9,7 +9,7 @@ if (!isset($_SESSION['idEntusiasta'])) {
 include("conn.php");
 
 // Consulta para obter as informações dos posts e dos usuários que os criaram
-$query = "SELECT Post.ID_Post, Post.Data_Post, Post.Descricao_Post, Post.Imagem_Post, Entusiasta.Nome_Entusiasta 
+$query = "SELECT Post.ID_Post, Post.Data_Post, Post.Descricao_Post, Post.Imagem_Post, Post.Like_Post, Entusiasta.Nome_Entusiasta 
           FROM Post 
           INNER JOIN Entusiasta ON Post.fk_Entusiasta_ID_Entusiasta = Entusiasta.ID_Entusiasta
           ORDER BY Post.Data_Post DESC"; // Ordena os posts por data decrescente
@@ -40,6 +40,13 @@ if (!$result) {
             <p>Data do Post: <?php echo $row['Data_Post']; ?></p>
             <p>Nome do Usuário: <?php echo $row['Nome_Entusiasta']; ?></p>
             <p>Descrição do Post: <?php echo $row['Descricao_Post']; ?></p>
+            <p>Likes: <?php echo $row['Like_Post']; ?></p>
+
+            <form action="like.php" method="post">
+                <input type="hidden" name="ID_Post" value="<?php echo $row['ID_Post']; ?>">
+                <button type="submit">Curtir</button>
+            </form>
+
             <?php if ($row['Imagem_Post']): ?>
                 <img src="data:image/jpeg;base64,<?php echo base64_encode($row['Imagem_Post']); ?>" alt="Imagem do Post">
             <?php endif; ?>
