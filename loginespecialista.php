@@ -35,7 +35,7 @@
 </head>
 <body id="bodylogin">
     <h2>Login de Especialista</h2>
-    <form method="POST" action="loginespecialista.php" id='caixa_formulario'>
+    <form method="POST" action="homeespecialista.php" id='caixa_formulario'>
         <label for="emailEspecialista">Email:</label>
         <input type="text" name="emailEspecialista" required><br>
         <label for="senhaEspecialista">Senha:</label>

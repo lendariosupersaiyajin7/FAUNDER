@@ -1,3 +1,11 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $ID_Post = $_POST['ID_Post'];
+    $Descricao_Post = $_POST['Descricao_Post'];
+    $Imagem_Post = $_POST['Imagem_Post'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +23,15 @@
         Data de Registro: <br>
         <input type="date" name="dataRegistroEspecie" id="dataRegistroEspecie" placeholder="Data de Registro" required><br>
         Descrição: <br>
-        <textarea name="descricaoEspecie" id="descricaoEspecie" placeholder="Descrição" required></textarea><br>
+        <textarea name="descricaoEspecie" id="descricaoEspecie" placeholder="Descrição" required><?php echo $Descricao_Post; ?></textarea><br>
         
         Imagem: <br>
-        <input type="file" name="imagem_Especie"><br><br>
-        <button type="submit">Registrar Espécie</button>
+        <?php if (!empty($Imagem_Post)): ?>
+            <img src="data:image/png;base64,<?php echo $Imagem_Post; ?>" alt="Imagem da Espécie" style="max-width: 200px; border-radius: 10px;"><br>
+        <?php endif; ?>
+        <input type="hidden" name="Imagem_Post" value="<?php echo $Imagem_Post; ?>">
+
+        <button type="submit">Validar Espécie</button>
     </form>    
 </body>
 </html>
-
-<script>
-
-</script>

@@ -48,8 +48,20 @@ if (!$result) {
             </form>
 
             <?php if ($row['Imagem_Post']): ?>
-                <img src="data:image/jpeg;base64,<?php echo base64_encode($row['Imagem_Post']); ?>" alt="Imagem do Post">
+                <img src="data:image/png;base64,<?php echo base64_encode($row['Imagem_Post']); ?>" alt="Imagem do Post">
             <?php endif; ?>
+
+            <?php if (isset($_SESSION['idEspecialista'])): ?>
+                <form action="especiecad.php" method="post">
+                    <input type="hidden" name="ID_Post" value="<?php echo $row['ID_Post']; ?>">
+                    <input type="hidden" name="Descricao_Post" value="<?php echo $row['Descricao_Post']; ?>">
+                    <?php if ($row['Imagem_Post']): ?>
+                        <input type="hidden" name="Imagem_Post" value="<?php echo base64_encode($row['Imagem_Post']); ?>">
+                    <?php endif; ?>
+                    <button type="submit">Validar Espécie</button>
+                </form>
+            <?php endif; ?>
+
             <hr>
         </div>
     <?php endwhile; ?>

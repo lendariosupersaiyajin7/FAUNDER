@@ -1,10 +1,12 @@
 <?php
+
 // Variável para verificar se o formulário deve ser exibido
 $exibirFormulario = true;
 
 // Mensagem de alerta caso o título já exista
 $alerta = "";
 
+session_start();
 // Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Incluir o arquivo de conexão com o banco de dados
@@ -36,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Mover o arquivo para o diretório de destino
             if (move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminho_arquivo)) {
-                // Inserir os dados do tópico no banco de dados, incluindo o caminho da imagem
-                $sql = "INSERT INTO Forum (Titulo_Forum, Descricao_Forum, Imagem_Capa) VALUES ('$titulo', '$descricao', '$caminho_arquivo')";
+
+                // Inserir os dados do tópico no banco de dados, incluindo o ID do usuário da sessão
+                $sql = "INSERT INTO Forum (Titulo_Forum, Descricao_Forum, Imagem_Capa, fk_Entusiasta_ID_Entusiasta) VALUES ('$titulo', '$descricao', '$caminho_arquivo', '{$_SESSION['idEntusiasta']}')";
 
                 if ($conn->query($sql) === TRUE) {
                     // Redirecionar para a página do fórum
@@ -51,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             // Caso não tenha sido enviado um arquivo, inserir os dados do tópico sem imagem
-            $sql = "INSERT INTO Forum (Titulo_Forum, Descricao_Forum) VALUES ('$titulo', '$descricao')";
+            $sql = "INSERT INTO Forum (Titulo_Forum, Descricao_Forum, fk_Entusiasta_ID_Entusiasta) VALUES ('$titulo', '$descricao', '{$_SESSION['idEntusiasta']}')";
 
             if ($conn->query($sql) === TRUE) {
                 // Redirecionar para a página do fórum
@@ -66,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fechar a conexão com o banco de dados
     $conn->close();
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -84,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script>alert("<?php echo $alerta; ?>");</script>
 <?php endif; ?>
 
-<?php?>
 <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" enctype="multipart/form-data">
     <label for="titulo">Título do Fórum:</label><br>
     <input type="text" id="titulo" name="titulo" required><br><br>
@@ -101,7 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="submit" value="Criar Fórum">
 </form>
-<?php?>
 
 <script src="js/imagem.js"></script>
 
