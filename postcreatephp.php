@@ -20,12 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // verifica se foi enviada uma imagem
         if ($imagem_post) {
             $conteudo_imagem = addslashes(file_get_contents($imagem_post));
-            $query = "INSERT INTO Post (Data_Post, Descricao_Post, Imagem_Post, fk_Entusiasta_ID_Entusiasta) VALUES ('$data_post', '$descricao_post', '$conteudo_imagem', '{$_SESSION['idEntusiasta']}')";
+            $query = "INSERT INTO Post (Data_Post, Descricao_Post, Like_Post, Imagem_Post, fk_Entusiasta_ID_Entusiasta) VALUES ('$data_post', '$descricao_post', 0, '$conteudo_imagem', '{$_SESSION['idEntusiasta']}')";
         } else {
-            $query = "INSERT INTO Post (Data_Post, Descricao_Post, fk_Entusiasta_ID_Entusiasta) VALUES ('$data_post', '$descricao_post', '{$_SESSION['idEntusiasta']}')";
+            $query = "INSERT INTO Post (Data_Post, Descricao_Post, Like_Post, fk_Entusiasta_ID_Entusiasta) VALUES ('$data_post', '$descricao_post', 0, '{$_SESSION['idEntusiasta']}')";
         }
         if (mysqli_query($conn, $query)) {
-            header("perfilentusiasta.php");
+
+            header("Location: notificacao.php");
         } else {
             echo "Erro ao criar o post: " . mysqli_error($conn);
         }
