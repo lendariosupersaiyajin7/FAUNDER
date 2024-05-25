@@ -20,7 +20,7 @@
             $_SESSION['nomeEspecialista'] = $user['Nome_Especialista'];
             $_SESSION['apelidoEspecialista'] = $user['Apelido_Especialista'];
             $_SESSION['idEspecialista'] = $user['ID_Especialista']; 
-            header("Location: perfilespecialista.php"); 
+            header("Location: homeespecialista.php"); 
             exit;
         } else {
             $error = "O Email ou a Senha estão incorretos.";

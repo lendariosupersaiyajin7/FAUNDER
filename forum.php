@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['idEntusiasta'])) {
     // Se o ID do entusiasta não estiver definido na sessão, redirecione o usuário para a página de login ou exiba uma mensagem de erro
-    header("Location: login.php");
+    header("Location: loginentusiasta.php");
     exit(); // Encerrar o script para evitar que o restante da página seja processado
 }
 
@@ -66,7 +66,11 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-<!-- Botão para criar um novo tópico -->
-<a href="criar_forum.php"><button>Criar Fórum</button></a>
+<!-- Botão para criar um novo fórum -->
+<?php
+    if (isset($_SESSION['idEntusiasta'])) {
+        echo "<a href='criar_forum.php'><button>Criar Fórum</button></a>";
+    }
+?>
 </body>
 </html>

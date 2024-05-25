@@ -1,23 +1,35 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['idEntusiasta'])) {
+if (!isset($_SESSION['idEntusiasta']) && !isset($_SESSION['idEspecialista'])) {
     echo "Erro: Usuário não autenticado.";
     exit;
 }
 
 include("conn.php");
 
-// Consulta para obter as informações dos posts e dos usuários que os criaram
+// Verificar se o ID do fórum foi especificado na URL
+if (!isset($_GET['id'])) {
+    echo "Erro: ID do fórum não especificado.";
+    exit;
+}
+
+$idForum = $_GET['id'];
+
+// Consulta para obter as informações dos posts específicos do fórum
 $query = "SELECT Post.ID_Post, Post.Data_Post, Post.Descricao_Post, Post.Imagem_Post, Post.Like_Post, Entusiasta.Nome_Entusiasta 
           FROM Post 
           INNER JOIN Entusiasta ON Post.fk_Entusiasta_ID_Entusiasta = Entusiasta.ID_Entusiasta
+          WHERE Post.fk_Forum_ID_Forum = ?
           ORDER BY Post.Data_Post DESC"; // Ordena os posts por data decrescente
 
-$result = mysqli_query($conn, $query);
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $idForum);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if (!$result) {
-    echo "Erro ao buscar os posts: " . mysqli_error($conn);
+    echo "Erro ao buscar os posts: " . $conn->error;
     exit;
 }
 
@@ -34,8 +46,8 @@ if (!$result) {
 
 <h1>Publicações</h1>
 
-<?php if (mysqli_num_rows($result) > 0): ?>
-    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+<?php if ($result->num_rows > 0): ?>
+    <?php while ($row = $result->fetch_assoc()): ?>
         <div>
             <p>Data do Post: <?php echo $row['Data_Post']; ?></p>
             <p>Nome do Usuário: <?php echo $row['Nome_Entusiasta']; ?></p>
@@ -57,7 +69,7 @@ if (!$result) {
     <p>Não há posts disponíveis.</p>
 <?php endif; ?>
 
-<a href="postcreate.php"><button>Criar Post</button></a>
+<a href="postcreate.php?id=<?php echo $idForum; ?>"><button>Criar Post</button></a>
 
 </body>
 </html>
