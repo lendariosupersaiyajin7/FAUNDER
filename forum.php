@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['idEntusiasta'])) {
     // Se o ID do entusiasta não estiver definido na sessão, redirecione o usuário para a página de login ou exiba uma mensagem de erro
-    header("Location: login.php");
+    header("Location: loginentusiasta.php");
     exit(); // Encerrar o script para evitar que o restante da página seja processado
 }
 
@@ -12,7 +11,8 @@ if (!isset($_SESSION['idEntusiasta'])) {
 include("conn.php");
 
 // Consulta SQL para selecionar todos os tópicos do fórum
-$sql = "SELECT ID_Forum, Titulo_Forum, Descricao_Forum, Data_Criacao_Forum, Imagem_Capa, fk_Entusiasta_ID_Entusiasta FROM Forum";
+$sql = "SELECT f.ID_Forum, f.Titulo_Forum, f.Descricao_Forum, f.Data_Criacao_Forum, f.Imagem_Capa, e.Nome_Entusiasta, f.fk_Entusiasta_ID_Entusiasta FROM Forum f INNER JOIN Entusiasta e ON f.fk_Entusiasta_ID_Entusiasta = e.ID_Entusiasta";
+
 $result = $conn->query($sql);
 
 // Verificar se a consulta retornou resultados
@@ -27,8 +27,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum</title>
-    <link rel="stylesheet" href="css/forum1.css">
-</head>
+    <link rel="stylesheet" href="css/forum1.css"></head>
 <body>
 
 <h1>Fóruns</h1>
@@ -44,15 +43,19 @@ if ($result->num_rows > 0) {
         }
         echo "<h2>" . $row["Titulo_Forum"] . "</h2>";
         echo "<p>" . $row["Descricao_Forum"] . "</p>";
-        echo "<p>Criado por: " . $row["fk_Entusiasta_ID_Entusiasta"] . "</p>";
-
+        echo "<p>Criado por: " . $row["Nome_Entusiasta"] . "</p>";
         echo "<p>Data de Criação: " . $row["Data_Criacao_Forum"] . "</p>";
 
         // Exibir a imagem de capa do grupo, se existir
 
         // Link para visualizar as mensagens do tópico
         echo "<a href='publicacoes.php?id=" . $row["ID_Forum"] . "'>Ver Posts</a>";
-        echo "<a href='editar_forum.php?id=" . $row["ID_Forum"] . "'><button>Editar Fórum</button></a>";
+        
+        // Verificar se o ID do entusiasta armazenado na sessão é igual ao ID do entusiasta que criou o fórum
+        if ($_SESSION['idEntusiasta'] == $row['fk_Entusiasta_ID_Entusiasta']) {
+            echo "<a href='editar_forum.php?id=" . $row["ID_Forum"] . "'><button>Editar Fórum</button></a>";
+        }
+        
         echo "</div>";
         echo "<hr>";
     }
@@ -63,7 +66,12 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-<!-- Botão para criar um novo tópico -->
-<a href="criar_forum.php"><button>Criar Fórum</button></a>
+<!-- Botão para criar um novo fórum -->
+<?php
+
+    if (isset($_SESSION['idEntusiasta'])) {
+        echo "<a href='criar_forum.php'><button>Criar Fórum</button></a>";
+    }
+?>
 </body>
 </html>

@@ -27,7 +27,7 @@
     
     <div>
         <a href="">Catálogo</a>
-        <a href="">Fórum</a>
+        <a href="especialistaforum.php">Fórum</a>
         <a href="perfilespecialista.php">Perfil</a>
 
 
