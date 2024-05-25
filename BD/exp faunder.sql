@@ -133,3 +133,7 @@ ALTER TABLE Registra ADD CONSTRAINT FK_Registra_2
     FOREIGN KEY (fk_Catalogo_ID_Catalogo)
     REFERENCES Catalogo (ID_Catalogo)
     ON DELETE SET NULL;
+
+ALTER TABLE Post ADD COLUMN fk_Forum_ID_Forum INT;
+ALTER TABLE Post ADD CONSTRAINT FK_Post_Forum FOREIGN KEY (fk_Forum_ID_Forum) REFERENCES Forum(ID_Forum) ON DELETE CASCADE;
+
