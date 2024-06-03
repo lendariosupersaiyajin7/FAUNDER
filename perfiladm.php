@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/perfil.css">
     <title>Perfil do ADM</title>
 </head>
 <body>

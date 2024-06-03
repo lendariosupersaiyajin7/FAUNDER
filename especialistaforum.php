@@ -27,7 +27,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórum Especialista</title>
-    <link rel="stylesheet" href="css/forum-especialista.css">
+    <link rel="stylesheet" href="css/Forum.css">
 </head>
 <body>
 

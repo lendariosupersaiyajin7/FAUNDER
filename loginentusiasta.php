@@ -32,6 +32,12 @@
 <html>
 <head>
     <title>Login de Entusiasta</title>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+      h2{
+        text-align: center;
+    }
+    </style>
 </head>
 <body id="bodylogin">
     <h2>Login de Entusiasta</h2>
@@ -40,7 +46,7 @@
         <input type="text" name="emailEntusiasta" required><br>
         <label for="senhaEntusiasta">Senha:</label>
         <input type="password" name="senhaEntusiasta" required><br>
-        <button type="submit">Entrar</button>
+        <button type="submit" id="botao3">Entrar</button>
     </form>
     <?php if (isset($error)): ?>
         <p><?php echo $error; ?></p>

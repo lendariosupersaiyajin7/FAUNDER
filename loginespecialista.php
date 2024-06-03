@@ -31,6 +31,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+      h2{
+        text-align: center;
+    }
+    </style>
     <title>Login de Especialista</title>
 </head>
 <body id="bodylogin">
@@ -40,7 +46,7 @@
         <input type="text" name="emailEspecialista" required><br>
         <label for="senhaEspecialista">Senha:</label>
         <input type="password" name="senhaEspecialista" required><br>
-        <button type="submit">Entrar</button>
+        <button type="submit" id="botao3">Entrar</button>
     </form>
     <?php if (isset($error)): ?>
         <p><?php echo $error; ?></p>

@@ -26,8 +26,8 @@
 <body>
     
     <div>
-        <a href="">Catálogo</a>
-        <a href="">Fórum</a>
+        <a href="especie_lst.php">Catálogo</a>
+        <a href="especialistaforum.php">Fórum</a>
         <a href="perfiladm.php">Perfil</a>
 
 
