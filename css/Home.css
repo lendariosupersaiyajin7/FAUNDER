@@ -1,0 +1,66 @@
+/* home.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    display: inline-block;
+    background-color: #18c518; /* Fundo verde */
+    color: #000; /* Texto preto */
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #167a16; /* Verde mais escuro no hover */
+}
+
+h1 {
+    text-align: center;
+    color: #19c719; /* Título em verde */
+}
+
+div.post {
+    background-color: #333; /* Fundo dos posts em cinza escuro */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+div.post p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #22ac22; /* Botão verde */
+    color: #000; /* Texto preto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #106e10; /* Botão verde mais escuro no hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}

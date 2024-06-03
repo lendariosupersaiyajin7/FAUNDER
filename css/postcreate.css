@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/030/949/926/original/cici-li-95a15454-085d-11eb-9a96-0242c0a82002.gif?1602135287");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: aliceblue;
+  }
+
+  #containerImagem {
+    width: 50%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #00ff44;
+    border-radius: 5px;
+    background-color: #0000007a;
+  }
+
+  #textarea {
+    width: 70%;
+    padding: 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical; /* Permitir apenas redimensionamento vertical */
+}
+
+/* Estilizando a text area quando estiver focada */
+#textarea:focus {
+    border-color: #007bff; /* Cor azul quando em foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave quando em foco */
+}
+
+/* Estilo para uma text area com erro */
+#textarea.error {
+    border-color: #dc3545; /* Cor vermelha para indicar erro */
+}
+
+/* Estilo para uma text area com sucesso */
+#textarea.success {
+    border-color: #28a745; /* Cor verde para indicar sucesso */
+}
+
+
+
+
+
+  #botao3 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #e1ff00, #45a049); /* Gradiente de cores */
+    background-size: 150% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    text-decoration: none; /* Remove sublinhado do texto */
+    
+}
+
+#botao3:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #45a049, #4ae1a9); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}
+
+#botao4 {
+    transition: 0.7s;
+    background: linear-gradient(to right, #ff0000, #fc8200); /* Gradiente de cores */
+    background-size: 150% auto; /* Tamanho do gradiente */
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+    text-decoration: none; /* Remove sublinhado do texto */
+}
+
+#botao4:hover {
+    transition: 0.7s;
+    background: linear-gradient(to right, #ff008c, #740030); /* Altera o gradiente ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    
+}

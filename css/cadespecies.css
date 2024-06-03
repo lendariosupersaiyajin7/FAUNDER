@@ -1,0 +1,61 @@
+/* login.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form {
+    background-color: #333; /* Fundo cinza escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00cc00; /* Borda verde */
+    border-radius: 5px;
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #00cc00; /* Fundo verde */
+    color: #000; /* Texto preto */
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009900; /* Verde mais escuro no hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

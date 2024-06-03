@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: green;
+}
+
+div {
+    background-color: #1f1f1f;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: green;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+hr {
+    border-color: green;
+    margin-top: 20px;
+}
